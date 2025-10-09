@@ -6,21 +6,38 @@ public class Workshop_Calculator {
     public static void main(String[]args){
 
 Scanner scanner = new Scanner(System.in);
-double fnum, snum, answer;
+double num1, num2, result;
 
 System.out.println("Enter first number:");
-fnum=scanner.nextDouble();
+        num2=scanner.nextDouble();
+
+        System.out.println("Enter the operator (+, -, *, / :");
+        char operator = scanner.next() .charAt(0);
+        switch(operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
 
 System.out.println("Enter second number:");
-snum=scanner.nextDouble();
+            num1=scanner.nextDouble();
 
-answer = fnum + snum;
-System.out.println(answer);
+System.out.println(result);
+
+
 
     }
 
 
 
-
+    }
 
 }
