@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Workshop_Calculator {
     public static void main(String[] args) {
 
-        while(true) {
+        boolean calc = true;
+        while(calc) {
 
             Scanner scanner = new Scanner(System.in);
             double num1, num2, result = 0;
@@ -34,7 +35,7 @@ public class Workshop_Calculator {
 
             if (choice.equalsIgnoreCase("no") || choice.equalsIgnoreCase("exit")) {
                 System.out.println("Exiting calculator. Goodbye!");
-                break;
+                calc=false;
             }
 
 
