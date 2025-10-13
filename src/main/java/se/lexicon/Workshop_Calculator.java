@@ -18,23 +18,25 @@ public class Workshop_Calculator {
             num2 = scanner.nextDouble();
 
 
-            switch (operator) {
-                case '+':
-                    result = num1 + num2;
-                    break;
-                case '-':
-                    result = num1 - num2;
-                    break;
-                case '*':
-                    result = num1 * num2;
-                    break;
-                case '/':
-                    result = num1 / num2;
-                    break;
-            }
+            result = switch (operator) {
+                case '+' -> num1 + num2;
+                case '-' -> num1 - num2;
+                case '*' -> num1 * num2;
+                case '/' -> num1 / num2;
+                default -> result;
+            };
 
 
             System.out.println("The result is: " + result);
+
+            System.out.print("Do you want to perform another calculation? (yes/no): ");
+            String choice = scanner.next();
+
+            if (choice.equalsIgnoreCase("no") || choice.equalsIgnoreCase("exit")) {
+                System.out.println("Exiting calculator. Goodbye!");
+                break;
+            }
+
 
         }
     }
