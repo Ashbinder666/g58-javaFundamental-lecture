@@ -2,6 +2,7 @@ package se.lexicon;
 
 import java.time.LocalDate;
 import java.util.Scanner;
+import java.time.Year;
 
 public class JavaExercises {
     public static void main(String[] args) {
@@ -10,15 +11,22 @@ public class JavaExercises {
         System.out.println("Alex");
 
         LocalDate currentDate = LocalDate.now();
-       // System.out.println("currentDate = " + currentDate);
+        // System.out.println("currentDate = " + currentDate);
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter year to see if it's leap year or not");
+        while (true) {
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter year to see if it's leap year or not");
+            int year = scanner.nextInt();
+
+            if (Year.isLeap(year)) {
+                System.out.println(year + " is a leap year.");
+            } else {
+                System.out.println(year + " is not a leap year.");
+            }
 
 
 
-
-        
-                
+        }
     }
 }
